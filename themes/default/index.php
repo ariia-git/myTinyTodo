@@ -28,6 +28,10 @@
 <script type="text/javascript">
     $().ready(function () {
 
+        if (isMobileDevice() && getGetParamValue(window.location.href, 'pda') == null) {
+            window.location.href += '/?pda';
+        }
+
         <?php if(isset($_GET['pda'])): ?>
 
         $('body').width(screen.width);

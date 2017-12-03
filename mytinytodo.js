@@ -4,6 +4,27 @@
 	Licensed under the GNU GPL v2 license. See file COPYRIGHT for details.
 */
 
+/**
+ * This function checks if the device accessing the page is a mobile device.
+ *
+ * @return {boolean} Returns true if the device is a mobile device and false otherwise.
+ */
+function isMobileDevice() {
+    return (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent));
+}
+
+/**
+ * This function takes a URL and the name of a GET parameter and returns the value of that
+ * parameter for the given URL.
+ *
+ * @param url The URL to get a get parameter value from.
+ * @param paramName The name of the parameter to retrieve the value for.
+ * @return {string | null} Returns the value of the parameter if it is present and null otherwise.
+ */
+function getGetParamValue(url, paramName) {
+    return new URL(url).searchParams.get(paramName);
+}
+
 (function () {
 
     var taskList = [], taskOrder = [];
