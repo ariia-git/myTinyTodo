@@ -2,7 +2,7 @@
 
 /*indentations*/
 
-seindentations_handler('myExceptionHandler');
+set_exception_handler('myExceptionHandler');
 
 # Check old config file (prior v1.3)
 require_once('./db/config.php');
